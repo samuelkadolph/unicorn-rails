@@ -11,7 +11,7 @@ module Rack
         def run(app, options = {})
           unicorn_options = {}
           unicorn_options[:listeners] = ["#{options[:Host]}:#{options[:Port]}"]
-          unicorn_options[:worker_processes] = 3
+          unicorn_options[:worker_processes] = 1
 
           if options[:debugger]
             unicorn_options[:worker_processes] = 1
