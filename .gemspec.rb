@@ -24,7 +24,7 @@ class Readme < String
 
   private
     def scrub(string)
-      string.delete("\\`").tr("\n", " ").to_s
+      string.delete("\\`").gsub(/\[([^\]]+)\]\([^)]*\)/, "\\1").tr("\n", " ").to_s
     end
 end
 

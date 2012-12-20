@@ -1,27 +1,26 @@
 # unicorn-rails
 
-`unicorn-rails` is a simple gem that sets the default server for rack (and rails) to unicorn.
+unicorn-rails is a simple gem that sets the default server for rack (and rails) to [unicorn](http://unicorn.bogomips.org/).
 
 ## Description
 
 unicorn-rails overrides the `Rack::Handler.default` method to return `Rack::Handler::Unicorn` which will cause rack (and
 rails) to use unicorn by default.
 
-## Installing
+## Installation
 
-### Recommended
+Add this line to your application's `Gemfile`:
 
-```
-gem install unicorn-rails
-```
+    gem "unicorn-rails"
 
-### Edge
+And then execute:
 
-```
-git clone https://github.com/samuelkadolph/unicorn-rails
-cd unicorn-rails && rake install
-```
+    $ bundle install
 
 ## Usage
 
-Add `gem "unicorn-rails"` to your Gemfile and then run `rails s` and it will use unicorn by default.
+Just add the gem to your `Gemfile` and then `rails server` will default to using unicorn.
+
+## Contributing
+
+Fork, branch & pull request.

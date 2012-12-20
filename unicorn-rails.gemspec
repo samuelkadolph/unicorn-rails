@@ -1,19 +1,19 @@
 require File.expand_path("../.gemspec", __FILE__)
-require File.expand_path("../lib/unicorn-rails/version", __FILE__)
+require File.expand_path("../lib/unicorn/rails/version", __FILE__)
 
-Gem::Specification.new do |s|
-  s.name        = "unicorn-rails"
-  s.version     = UnicornRails::VERSION
-  s.authors     = ["Samuel Kadolph"]
-  s.email       = ["samuel@kadolph.com"]
-  s.homepage    = "https://github.com/samuelkadolph/unicorn-rails"
-  s.summary     = readme.summary
-  s.description = readme.description
+Gem::Specification.new do |gem|
+  gem.name        = "unicorn-rails"
+  gem.authors     = ["Samuel Kadolph"]
+  gem.email       = ["samuel@kadolph.com"]
+  gem.description = readme.description
+  gem.summary     = readme.summary
+  gem.homepage    = "https://github.com/samuelkadolph/unicorn-rails"
+  gem.version     = Unicorn::Rails::VERSION
 
-  s.required_ruby_version = ">= 1.8.7"
+  gem.files       = Dir["lib/**/*"]
 
-  s.files = Dir["lib/**/*", "LICENSE", "README.md"]
+  gem.required_ruby_version = ">= 1.8.7"
 
-  s.add_dependency "rack"
-  s.add_dependency "unicorn"
+  gem.add_dependency "rack"
+  gem.add_dependency "unicorn"
 end
