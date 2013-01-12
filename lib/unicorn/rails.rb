@@ -25,7 +25,7 @@ module Rack
     register "unicorn", "Rack::Handler::Unicorn"
 
     def self.default(options = {})
-     Rack::Handler::Unicorn
+      Rack::Handler::Unicorn
     end
   end
 end
