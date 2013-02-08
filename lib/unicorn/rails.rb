@@ -13,7 +13,7 @@ module Rack
         def run(app, options = {})
           unicorn_options = {}
           unicorn_options[:listeners] = ["#{options[:Host]}:#{options[:Port]}"]
-          unicorn_options[:worker_processes] = 1
+          unicorn_options[:worker_processes] = ENV['UNICORN_WORKERS'].to_i || 1
           unicorn_options[:timeout] = 31 * 24 * 60 * 60
 
           ::Unicorn::Launcher.daemonize!(unicorn_options) if options[:daemonize]
