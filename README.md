@@ -1,3 +1,7 @@
+[![Gem Version](https://badge.fury.io/rb/unicorn-rails.png)](http://badge.fury.io/rb/unicorn-rails)
+[![Dependency Status](https://gemnasium.com/samuelkadolph/unicorn-rails.png)](https://gemnasium.com/samuelkadolph/unicorn-rails)
+[![Code Climate](https://codeclimate.com/github/samuelkadolph/unicorn-rails.png)](https://codeclimate.com/github/samuelkadolph/unicorn-rails)
+
 # unicorn-rails
 
 unicorn-rails is a simple gem that sets the default server for rack (and rails) to [unicorn](http://unicorn.bogomips.org/).
