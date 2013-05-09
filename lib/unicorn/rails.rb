@@ -1,10 +1,5 @@
 require "unicorn"
-
-module Unicorn
-  module Rails
-    require "unicorn/rails/version"
-  end
-end
+require "unicorn/rails/version"
 
 module Rack
   module Handler
