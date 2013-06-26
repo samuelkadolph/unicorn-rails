@@ -16,12 +16,16 @@ module Rack
           unicorn_options[:worker_processes] = (ENV["UNICORN_WORKERS"] || "1").to_i
           unicorn_options[:timeout] = 31 * 24 * 60 * 60
 
-          if ::File.exist?("config/unicorn/#{ENV["RAILS_ENV"]}.rb")
-            unicorn_options[:config_file] = "config/unicorn/#{ENV["RAILS_ENV"]}.rb"
+          if ::File.exist?("config/unicorn/#{environment}.rb")
+            unicorn_options[:config_file] = "config/unicorn/#{environment}.rb"
           end
 
           ::Unicorn::Launcher.daemonize!(unicorn_options) if options[:daemonize]
           ::Unicorn::HttpServer.new(app, unicorn_options).start.join
+        end
+
+        def environment
+          ENV['RACK_ENV'] || ENV['RAILS_ENV']
         end
       end
     end
