@@ -1,4 +1,5 @@
 require "unicorn"
+require "unicorn/launcher"
 
 module UnicornRails
   require "unicorn_rails/version"
