@@ -1,5 +1,5 @@
 require File.expand_path("../.gemspec", __FILE__)
-require File.expand_path("../lib/unicorn/rails/version", __FILE__)
+require File.expand_path("../lib/unicorn_rails/version", __FILE__)
 
 Gem::Specification.new do |gem|
   gem.name        = "unicorn-rails"
@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.description = readme.description
   gem.summary     = readme.summary
   gem.homepage    = "https://github.com/samuelkadolph/unicorn-rails"
-  gem.version     = Unicorn::Rails::VERSION
+  gem.version     = UnicornRails::VERSION
 
   gem.files       = Dir["lib/**/*"]
 
