@@ -1,1 +1,1 @@
-require "unicorn/rails"
+require "unicorn_rails"

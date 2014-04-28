@@ -1,9 +1,7 @@
 require "unicorn"
 
-module Unicorn
-  module Rails
-    require "unicorn/rails/version"
-  end
+module UnicornRails
+  require "unicorn_rails/version"
 end
 
 module Rack
