@@ -9,6 +9,7 @@ Gem::Specification.new do |gem|
   gem.summary     = readme.summary
   gem.homepage    = "https://github.com/samuelkadolph/unicorn-rails"
   gem.version     = UnicornRails::VERSION
+  gem.license     = "MIT"
 
   gem.files       = Dir["lib/**/*"]
 
