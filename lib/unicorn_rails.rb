@@ -13,6 +13,11 @@ module Rack
           unicorn_options = {
             :listeners => ["#{options[:Host]}:#{options[:Port]}"]
           }
+          
+          if options[:pid]
+            ::File.open(options[:pid], 'w+') {}
+            unicorn_options[:pid] = options[:pid]
+          end
 
           if ::File.exist?("config/unicorn/#{environment}.rb")
             unicorn_options[:config_file] = "config/unicorn/#{environment}.rb"
