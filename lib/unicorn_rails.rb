@@ -24,7 +24,7 @@ module Rack
           end
 
           if unicorn_options[:config_file]
-            if ::File.read(unicorn_options[:config_file]) =~ /^(\s+)listen\s/
+            if ::File.read(unicorn_options[:config_file]) =~ /^(\s*)listen\s/
               unicorn_options.delete(:listeners)
             end
           end
