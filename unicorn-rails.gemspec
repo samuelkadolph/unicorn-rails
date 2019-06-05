@@ -16,4 +16,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "rack"
   gem.add_dependency "unicorn"
+  gem.add_dependency "bundle-audit"
 end

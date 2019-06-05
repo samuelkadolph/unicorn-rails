@@ -25,6 +25,10 @@ And then execute:
 
 Just add the gem to your `Gemfile` and then `rails server` will default to using unicorn.
 
+### Optional Environment Variables
+
+`UNICORN_WORKERS` -> set the amout of instances you like to start. Default: 1
+
 ## Contributing
 
 Fork, branch & pull request.
